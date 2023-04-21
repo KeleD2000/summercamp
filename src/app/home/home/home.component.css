@@ -5,14 +5,26 @@ form{
 @media only screen and (max-width: 800px) {
     .kep{
         width: 225px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
   }
 
 @media only screen and (min-width: 800px) {
     .kep{
         width: 150px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
   }
+
+.card {
+    padding: 20px;
+}
 
 .szoveg{
     text-align: center; 

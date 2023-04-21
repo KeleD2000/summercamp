@@ -1,5 +1,5 @@
-<mat-nav-list>
-  <a routerLink="home">
+<mat-nav-list *ngIf="!loggedInUser">
+  <a routerLink="startpage">
     <span class="nav-caption">Kezdőlap</span>
   </a>
   <a routerLink="signin">
@@ -7,5 +7,16 @@
   </a>
   <a routerLink="signup"> 
     <span class="nav-caption">Regisztráció</span>
+   </a>
+</mat-nav-list>
+<mat-nav-list *ngIf="loggedInUser">
+  <a routerLink="homem/home">
+    <span class="nav-caption">Főoldal</span>
+  </a>
+  <a routerLink="homem/camps">
+    <span class="nav-caption">Táboraink</span>
+  </a>
+  <a (click)="logout()"> 
+    <span class="nav-caption">Kijelentkezés</span>
    </a>
 </mat-nav-list>

@@ -11,21 +11,30 @@
         <span class="example-spacer"></span>
         <div class="example-button-row">
           <div fxHide.xs>
-          <button mat-raised-button color="accent" routerLink="home">
+          <button *ngIf="!loggedInUser" mat-raised-button color="accent" routerLink="startpage">
             Kezdőlap
           </button>
-          <button mat-raised-button color="accent" routerLink="signin">
+          <button *ngIf="!loggedInUser" mat-raised-button color="accent" routerLink="signin">
             Bejelentkezés
           </button>
-          <button mat-raised-button color="accent" routerLink="signup">
+          <button *ngIf="!loggedInUser" mat-raised-button color="accent" routerLink="signup">
             Regisztráció
+          </button>
+          <button *ngIf="loggedInUser" mat-raised-button color="accent" routerLink="homem/home">
+            Főoldal
+          </button>
+          <button *ngIf="loggedInUser" mat-raised-button color="accent" routerLink="homem/camps">
+            Táboraink
+          </button>
+          <button (click) ="logout()" *ngIf="loggedInUser" mat-raised-button color="accent" routerLink="signup">
+            Kijelentkezés
           </button>
         </div>
         </div>
     </mat-toolbar>
-  
       <router-outlet></router-outlet>
     
   </mat-sidenav-content>
 </mat-sidenav-container>
+
 

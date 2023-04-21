@@ -6,7 +6,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { StartPageComponent } from './start-page/start-page.component';
 
 const routes: Routes = [
-    {path:'home', component:StartPageComponent},
+    {path:'startpage', component:StartPageComponent},
     {path:'signin', component:SigninComponent},
     {path:'signup', component:SignupComponent},
     {path:'**', component: NotFoundComponent}

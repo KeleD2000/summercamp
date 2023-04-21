@@ -24,7 +24,7 @@ export class SigninComponent {
 
   onLogin(){
     this.authService.login(this.loginForm.get('email')?.value, this.loginForm.get('pw')?.value).then((cr) => {
-      console.log(cr);
+      this.router.navigate(['homem/home']);
     
     }).catch((err) => {
       console.log(err);
