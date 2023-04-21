@@ -6,11 +6,20 @@
         </mat-card-header>
         <mat-form-field>
           <mat-label>Email</mat-label>
-          <input formControlName="email" matInput placeholder="example@gmail.com"/>
+          <input type="email" formControlName="email"  matInput placeholder="example@gmail.com"/>
+          <mat-error *ngIf="loginForm.get('email')?.errors?.['required']">
+            Kötelező kitölteni!
+          </mat-error>
+          <mat-error *ngIf="loginForm.get('email')?.errors?.['email']">
+            Adj meg egy valid email címet!
+          </mat-error>
         </mat-form-field>
         <mat-form-field>
           <mat-label>Jelszó</mat-label>
           <input formControlName="pw" matInput placeholder="jelszo123" />
+          <mat-error *ngIf="loginForm.get('pw')?.errors?.['required']">
+            Kötelező kitölteni!
+          </mat-error>
         </mat-form-field>
         <button mat-raised-button color="primary">Belépés</button>
       </form>

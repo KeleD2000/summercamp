@@ -15,8 +15,8 @@ export class SignupComponent {
   constructor(private authService: AuthService, private router: Router){
     this.registerForm = new FormGroup({
       
-      email: new FormControl('', [Validators.required],),
-      pw: new FormControl('', [Validators.required])
+      email: new FormControl('', [Validators.required, Validators.email]),
+      pw: new FormControl('', [Validators.required, Validators.minLength(8)])
 
     });
   }
