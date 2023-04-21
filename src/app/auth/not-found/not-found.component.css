@@ -1,0 +1,14 @@
+form{
+    padding: 20px;
+}
+@media only screen and (max-width: 800px) {
+    .kep{
+        width: 225px;
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    .kep{
+        width: 150px;
+    }
+  }

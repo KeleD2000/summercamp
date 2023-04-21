@@ -1,0 +1,31 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div fxHide.gt-xs="hide">
+        <button (click)="onToggleSidenav(sidenav)" mat-icon-button><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon></button>
+      </div>
+        <span>Summer Camp</span>
+        <span class="example-spacer"></span>
+        <div class="example-button-row">
+          <div fxHide.xs>
+          <button mat-raised-button color="accent" routerLink="home">
+            Kezdőlap
+          </button>
+          <button mat-raised-button color="accent" routerLink="signin">
+            Bejelentkezés
+          </button>
+          <button mat-raised-button color="accent" routerLink="signup">
+            Regisztráció
+          </button>
+        </div>
+        </div>
+    </mat-toolbar>
+  
+      <router-outlet></router-outlet>
+    
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
