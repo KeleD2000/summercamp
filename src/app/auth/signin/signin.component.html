@@ -1,9 +1,9 @@
 <div fxLayoutAlign="center">
   <mat-card fxFlex.sm="50" fxFlex.xs="100" fxFlex.md="50" fxFlex="50">
-    <mat-card-header>
-      <mat-card-title>Bejelentkezés</mat-card-title>
-    </mat-card-header>
       <form (ngSubmit)="onLogin()" [formGroup]="loginForm" fxLayout="column" fxLayoutAlign="streth" class="example-form">
+        <mat-card-header>
+          <mat-card-title>Bejelentkezés</mat-card-title>
+        </mat-card-header>
         <mat-form-field>
           <mat-label>Email</mat-label>
           <input formControlName="email" matInput placeholder="example@gmail.com"/>

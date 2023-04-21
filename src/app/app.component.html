@@ -5,36 +5,73 @@
   <mat-sidenav-content>
     <mat-toolbar color="primary">
       <div fxHide.gt-xs="hide">
-        <button (click)="onToggleSidenav(sidenav)" mat-icon-button><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon></button>
+        <button (click)="onToggleSidenav(sidenav)" mat-icon-button>
+          <mat-icon
+            aria-hidden="false"
+            aria-label="Example home icon"
+            fontIcon="home"
+          ></mat-icon>
+        </button>
       </div>
         <span>Summer Camp</span>
-        <span class="example-spacer"></span>
-        <div class="example-button-row">
-          <div fxHide.xs>
-          <button *ngIf="!loggedInUser" mat-raised-button color="accent" routerLink="startpage">
+        <div fxHide.xs>
+          <span class="material-symbols-outlined"> camping </span>
+        </div>
+      <span class="example-spacer"></span>
+      <div class="example-button-row">
+        <div fxHide.xs>
+          <button
+            *ngIf="!loggedInUser"
+            mat-raised-button
+            color="accent"
+            routerLink="startpage"
+          >
             Kezdőlap
           </button>
-          <button *ngIf="!loggedInUser" mat-raised-button color="accent" routerLink="signin">
+          <button
+            *ngIf="!loggedInUser"
+            mat-raised-button
+            color="accent"
+            routerLink="signin"
+          >
             Bejelentkezés
           </button>
-          <button *ngIf="!loggedInUser" mat-raised-button color="accent" routerLink="signup">
+          <button
+            *ngIf="!loggedInUser"
+            mat-raised-button
+            color="accent"
+            routerLink="signup"
+          >
             Regisztráció
           </button>
-          <button *ngIf="loggedInUser" mat-raised-button color="accent" routerLink="homem/home">
+          <button
+            *ngIf="loggedInUser"
+            mat-raised-button
+            color="accent"
+            routerLink="homem/home"
+          >
             Főoldal
           </button>
-          <button *ngIf="loggedInUser" mat-raised-button color="accent" routerLink="homem/camps">
+          <button
+            *ngIf="loggedInUser"
+            mat-raised-button
+            color="accent"
+            routerLink="homem/camps"
+          >
             Táboraink
           </button>
-          <button (click) ="logout()" *ngIf="loggedInUser" mat-raised-button color="accent" routerLink="signup">
+          <button
+            (click)="logout()"
+            *ngIf="loggedInUser"
+            mat-raised-button
+            color="accent"
+            routerLink="signup"
+          >
             Kijelentkezés
           </button>
         </div>
-        </div>
+      </div>
     </mat-toolbar>
-      <router-outlet></router-outlet>
-    
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
-
-

@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./camps.component.css']
 })
 export class CampsComponent {
-
+  panelOpenStateWater = false;
+  panelOpenStateForest = false;
+  panelOpenStateAdventure = false;
 }

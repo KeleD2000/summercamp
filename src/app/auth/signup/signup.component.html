@@ -1,19 +1,28 @@
 <div fxLayoutAlign="center">
-    <mat-card fxFlex.sm="50" fxFlex.xs="100" fxFlex.md="50" fxFlex="50">
+  <mat-card fxFlex.sm="50" fxFlex.xs="100" fxFlex.md="50" fxFlex="50">
+    <form
+      (ngSubmit)="onSignup()"
+      [formGroup]="registerForm"
+      fxLayout="column"
+      fxLayoutAlign="streth"
+      class="example-form"
+    >
       <mat-card-header>
         <mat-card-title>Regisztráció</mat-card-title>
       </mat-card-header>
-        <form (ngSubmit)="onSignup()" [formGroup]="registerForm" fxLayout="column" fxLayoutAlign="streth" class="example-form">
-          <mat-form-field>
-            <mat-label>Email</mat-label>
-            <input formControlName="email" matInput placeholder="example@gmail.com" />
-          </mat-form-field>
-          <mat-form-field>
-            <mat-label>Jelszó</mat-label>
-            <input formControlName="pw" matInput placeholder="jelszo123" />
-          </mat-form-field>
-          <button mat-raised-button color="primary">Regisztrálás</button>
-        </form>
-    </mat-card>
-  </div>
-  
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input
+          formControlName="email"
+          matInput
+          placeholder="example@gmail.com"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Jelszó</mat-label>
+        <input formControlName="pw" matInput placeholder="jelszo123" />
+      </mat-form-field>
+      <button mat-raised-button color="primary">Regisztrálás</button>
+    </form>
+  </mat-card>
+</div>

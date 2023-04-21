@@ -19,6 +19,7 @@ import { environment } from 'src/environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { HomeModule } from './home/home.module';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 
@@ -46,7 +47,8 @@ import { HomeModule } from './home/home.module';
     FlexLayoutModule,
     MatInputModule,
     MatFormFieldModule,
-    HomeModule
+    HomeModule,
+    MatExpansionModule
     
   ],
   providers: [],

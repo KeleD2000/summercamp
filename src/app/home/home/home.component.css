@@ -6,7 +6,7 @@ form{
     .kep{
         width: 225px;
         position: relative;
-        top: 50%;
+        top: 25%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -16,7 +16,7 @@ form{
     .kep{
         width: 150px;
         position: relative;
-        top: 50%;
+        top: 25%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -29,6 +29,5 @@ form{
 .szoveg{
     text-align: center; 
     width: 100%; 
-    margin: 5px; 
-    padding: 5px;
+    
 }

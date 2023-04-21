@@ -6,15 +6,16 @@
     fxFlex="42"
     class="card"
   >
-    <mat-card-header>
-      <div style="text-align: center; width: 100%">
-        <mat-card-title>Táboraink az idei nyárra</mat-card-title>
+    <form fxLayout="column" fxLayoutAlign="streth" class="example-form">
+      <mat-card-header>
+        <div class="szoveg">
+          <mat-card-title>Táboraink az idei nyárra</mat-card-title>
+        </div>
+      </mat-card-header>
+      <div *ngFor="let camp of ELEMENT_DATA">
+        <p class="szoveg">{{ camp.text }}</p>
+        <img class="kep" [src]="camp.img" />
       </div>
-    </mat-card-header>
-    <div *ngFor="let camp of ELEMENT_DATA">
-      <p class="szoveg">{{ camp.text }}</p>
-      <img class="kep" [src]="camp.img"/>
-    </div>
-    <form fxLayout="column" fxLayoutAlign="streth" class="example-form"></form>
+    </form>
   </mat-card>
 </div>
