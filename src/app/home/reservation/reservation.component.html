@@ -1,0 +1,63 @@
+<div fxLayoutAlign="center">
+    <mat-card fxFlex.sm="50" fxFlex.xs="100" fxFlex.md="50" fxFlex="50">
+        <form [formGroup]="reservationForm" fxLayout="column" fxLayoutAlign="streth" class="example-form">
+          <mat-card-header>
+            <mat-card-title>Foglalás</mat-card-title>
+          </mat-card-header>
+          <mat-form-field>
+            <mat-label>Vezetéknév</mat-label>
+            <input type="email" formControlName="lastname"  matInput placeholder="pl.: Kiss"/>
+            <mat-error>
+              Kötelező kitölteni!
+            </mat-error>
+            <mat-error>
+              Adj meg egy valid email címet!
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Keresztnév</mat-label>
+            <input formControlName="firstname" matInput placeholder="pl.: István" />
+            <mat-error>
+              Kötelező kitölteni!
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Életkor</mat-label>
+            <input formControlName="age" matInput placeholder="pl.: 14" />
+            <mat-error>
+              Kötelező kitölteni!
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Neme</mat-label>
+            <input formControlName="sex" matInput />
+            <mat-error>
+              Kötelező kitölteni!
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Személyi igazolvány</mat-label>
+            <input formControlName="identitycard" matInput placeholder="pl.: WaterLand" />
+            <mat-error>
+              Kötelező kitölteni!
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Tábor neve</mat-label>
+            <input formControlName="campname" matInput placeholder="pl.: 2023.07.01. - 2023.07.08." />
+            <mat-error>
+              Kötelező kitölteni!
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Tábor dátuma</mat-label>
+            <input formControlName="date" matInput placeholder="pl.: 2023.07.01. - 2023.07.08." />
+            <mat-error>
+              Kötelező kitölteni!
+            </mat-error>
+          </mat-form-field>
+          <button (click)="onSubmit()" mat-raised-button color="primary">Foglalás</button>
+        </form>
+    </mat-card>
+  </div>
+  

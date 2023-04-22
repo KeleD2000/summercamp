@@ -20,6 +20,8 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { HomeModule } from './home/home.module';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import {MatTableModule} from '@angular/material/table'
 
 
 
@@ -48,7 +50,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatInputModule,
     MatFormFieldModule,
     HomeModule,
-    MatExpansionModule
+    MatExpansionModule,
+    AngularFirestoreModule,
+    MatTableModule
     
   ],
   providers: [],

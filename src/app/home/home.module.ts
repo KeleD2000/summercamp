@@ -7,20 +7,37 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { CampsComponent } from './camps/camps.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import {MatButtonModule} from '@angular/material/button';
+import { ReservationComponent } from './reservation/reservation.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ReservationHandlerComponent } from './reservation-handler/reservation-handler.component';
+import { MatTableModule } from '@angular/material/table';
+
 
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    CampsComponent
+    CampsComponent,
+    ReservationComponent,
+    ReservationHandlerComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     FlexLayoutModule,
     MatCardModule,
-    MatExpansionModule
+    MatExpansionModule,
+    AngularFirestoreModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatTableModule
     
   ]
 })

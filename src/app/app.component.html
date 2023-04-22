@@ -61,6 +61,14 @@
             Táboraink
           </button>
           <button
+            *ngIf="loggedInUser"
+            mat-raised-button
+            color="accent"
+            routerLink="homem/reservationhandler"
+          >
+            Foglalásaim
+          </button>
+          <button
             (click)="logout()"
             *ngIf="loggedInUser"
             mat-raised-button

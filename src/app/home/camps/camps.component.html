@@ -6,55 +6,27 @@
     fxFlex="42"
     class="card"
   >
-    <form fxLayout="column" fxLayoutAlign="streth" class="example-form">
       <mat-card-header>
         <div style="text-align: center; width: 100%">
           <mat-card-title>Válaszd ki az álmaid táborát</mat-card-title>
         </div>
       </mat-card-header>
       <mat-accordion>
-        <mat-expansion-panel (opened)="panelOpenStateWater = true"
-                             (closed)="panelOpenStateWater = false">
+        <mat-expansion-panel
+          *ngFor="let campi of ELEMENT_DATA"
+        >
           <mat-expansion-panel-header>
             <mat-panel-title>
-              WaterLand
+              {{ campi.campname }}
             </mat-panel-title>
-            <mat-panel-description>
-              {{panelOpenStateWater ? 'Ha esetleg másik tábort választana, akkor zárja be' : 'Több információhoz nyissa le'}}
-            </mat-panel-description>
           </mat-expansion-panel-header>
-          <p>Idekéne kiiratni a firebase szarokat</p>
+          <p>Ár: {{ campi.data.price }}</p>
+          <p>Kezdés dátuma: {{ campi.data.startdate }}</p>
+          <p>Végzés dátuma: {{ campi.data.enddate }}</p>
+          <p>Helyszín: {{ campi.data.place }}</p>
+          <p>Férőhely: {{ campi.data.houseroom }}</p>
+          <button mat-raised-button color="primary" routerLink="/homem/reservation/{{campi.campname}}">Foglalás</button>
         </mat-expansion-panel>
       </mat-accordion>
-      <mat-accordion>
-        <mat-expansion-panel (opened)="panelOpenStateForest = true"
-                             (closed)="panelOpenStateForest = false">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              ForestLand
-            </mat-panel-title>
-            <mat-panel-description>
-              {{panelOpenStateForest ? 'Ha esetleg másik tábort választana, akkor zárja be' : 'Több információhoz nyissa le'}}
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>Idekéne kiiratni a firebase szarokat</p>
-        </mat-expansion-panel>
-      </mat-accordion>
-      <mat-accordion>
-        <mat-expansion-panel (opened)="panelOpenStateAdventure = true"
-                             (closed)="panelOpenStateAdventure = false">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              AdventureLand
-            </mat-panel-title>
-            <mat-panel-description>
-              {{panelOpenStateAdventure ? 'Ha esetleg másik tábort választana, akkor zárja be' : 'Több információhoz nyissa le'}}
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>Idekéne kiiratni a firebase szarokat</p>
-        </mat-expansion-panel>
-      </mat-accordion>
-      
-    </form>
   </mat-card>
 </div>
