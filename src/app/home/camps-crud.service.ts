@@ -11,7 +11,7 @@ export class CampsCrudService {
 
   getReservationList(){
     return this.angularFirestone
-    .collection("reservation")
+    .collection<Reservation>("reservation")
     .snapshotChanges();
   }
 
@@ -45,4 +45,13 @@ export class CampsCrudService {
       date: reservation.date
     });
   }
+
+  getReservationById(user_id: string){
+    return this.angularFirestone.collection<Reservation>('reservation', rf => rf.where("user_id","==", user_id)).snapshotChanges();
+  }
+
+  getReservationByDocId(id: string){
+    return this.angularFirestone.collection<Reservation>('reservation').doc(id).snapshotChanges();
+  }
+
 }

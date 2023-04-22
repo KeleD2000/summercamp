@@ -24,7 +24,7 @@
             *ngIf="!loggedInUser"
             mat-raised-button
             color="accent"
-            routerLink="startpage"
+            routerLink="auth/startpage"
           >
             Kezdőlap
           </button>
@@ -32,7 +32,7 @@
             *ngIf="!loggedInUser"
             mat-raised-button
             color="accent"
-            routerLink="signin"
+            routerLink="auth/signin"
           >
             Bejelentkezés
           </button>
@@ -40,7 +40,7 @@
             *ngIf="!loggedInUser"
             mat-raised-button
             color="accent"
-            routerLink="signup"
+            routerLink="auth/signup"
           >
             Regisztráció
           </button>
@@ -73,7 +73,7 @@
             *ngIf="loggedInUser"
             mat-raised-button
             color="accent"
-            routerLink="signup"
+            routerLink="auth/startpage"
           >
             Kijelentkezés
           </button>

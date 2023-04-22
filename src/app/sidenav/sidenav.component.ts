@@ -29,7 +29,6 @@ export class SidenavComponent {
       .logout()
       .then(() => {
         console.log('Sikeres kijelentkezés');
-        this.router.navigate(['startpage']);
       })
       .catch((err) => {
         console.log(err);
