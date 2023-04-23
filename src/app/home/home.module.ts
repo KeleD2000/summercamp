@@ -16,6 +16,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ReservationHandlerComponent } from './reservation-handler/reservation-handler.component';
 import { MatTableModule } from '@angular/material/table';
 import { ReservationModifyComponent } from './reservation-modify/reservation-modify.component';
+import { HoverCursorDirective } from '../directives/hover-cursor.directive';
+import { ButtonHoverDirective } from '../directives/button-hover.directive';
+import { CapatalizePipe } from '../pipes/capatalize.pipe';
 
 
 
@@ -26,7 +29,10 @@ import { ReservationModifyComponent } from './reservation-modify/reservation-mod
     CampsComponent,
     ReservationComponent,
     ReservationHandlerComponent,
-    ReservationModifyComponent
+    ReservationModifyComponent,
+    HoverCursorDirective,
+    ButtonHoverDirective,
+    CapatalizePipe
   ],
   imports: [
     CommonModule,

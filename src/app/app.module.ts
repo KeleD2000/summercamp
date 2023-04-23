@@ -21,7 +21,11 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { HomeModule } from './home/home.module';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import {MatTableModule} from '@angular/material/table'
+import {MatTableModule} from '@angular/material/table';
+
+
+
+
 
 
 

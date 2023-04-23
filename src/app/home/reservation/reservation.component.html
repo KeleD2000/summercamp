@@ -10,9 +10,6 @@
             <mat-error>
               Kötelező kitölteni!
             </mat-error>
-            <mat-error>
-              Adj meg egy valid email címet!
-            </mat-error>
           </mat-form-field>
           <mat-form-field>
             <mat-label>Keresztnév</mat-label>
@@ -56,7 +53,7 @@
               Kötelező kitölteni!
             </mat-error>
           </mat-form-field>
-          <button (click)="onSubmit()" mat-raised-button color="warn">Foglalás</button>
+          <button appButtonHover (click)="onSubmit()" mat-raised-button color="primary">Foglalás</button>
         </form>
     </mat-card>
   </div>

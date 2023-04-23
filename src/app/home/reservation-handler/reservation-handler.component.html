@@ -6,12 +6,12 @@
     <table mat-table [dataSource]="reservations">
       <ng-container matColumnDef="lastname">
         <th mat-header-cell *matHeaderCellDef>Vezetéknév</th>
-        <td mat-cell *matCellDef="let element">{{ element.lastname }}</td>
+        <td mat-cell *matCellDef="let element">{{ element.lastname | capatalize }}</td>
       </ng-container>
 
       <ng-container matColumnDef="firstname">
         <th mat-header-cell *matHeaderCellDef>Keresztnév</th>
-        <td mat-cell *matCellDef="let element">{{ element.firstname }}</td>
+        <td mat-cell *matCellDef="let element">{{ element.firstname | capatalize}}</td>
       </ng-container>
 
       <ng-container matColumnDef="age">
@@ -31,7 +31,7 @@
 
       <ng-container matColumnDef="campname">
         <th mat-header-cell *matHeaderCellDef>Tábor neve</th>
-        <td mat-cell *matCellDef="let element">{{ element.campname }}</td>
+        <td mat-cell *matCellDef="let element">{{ element.campname | capatalize }}</td>
       </ng-container>
 
       <ng-container matColumnDef="date">
@@ -42,8 +42,8 @@
       <ng-container matColumnDef="operations">
         <th mat-header-cell *matHeaderCellDef>Műveletek</th>
         <td mat-cell *matCellDef="let element">
-          <span  routerLink="reservation-modify" class="material-symbols-outlined"> edit </span>
-          <span (click)="onDelete(element)" class="material-symbols-outlined"> delete </span>
+          <span appHoverCursor routerLink="/homem/reservation-modify/{{element.id}}" class="material-symbols-outlined"> edit </span>
+          <span appHoverCursor (click)="onDelete(element)" class="material-symbols-outlined"> delete </span>
         </td>
       </ng-container>
 

@@ -12,7 +12,7 @@ const routes: Routes = [
   {path:'camps', component: CampsComponent, canActivate:[AuthGuard]},
   {path:'reservation/:campname', component:ReservationComponent, canActivate:[AuthGuard]},
   {path:'reservationhandler', component: ReservationHandlerComponent, canActivate:[AuthGuard]},
-  {path:'reservationhandler/reservation-modify', component: ReservationModifyComponent, canActivate:[AuthGuard]}
+  {path:'reservation-modify/:id', component: ReservationModifyComponent, canActivate:[AuthGuard]}
 ];
 
 @NgModule({

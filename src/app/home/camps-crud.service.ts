@@ -31,19 +31,11 @@ export class CampsCrudService {
     .delete();
   }
 
-  updateCamps(reservation: Reservation){
+  updateCamps(reservation: Reservation, id: string){
     return this.angularFirestone
     .collection<Reservation>("reservation")
-    .doc(reservation.id)
-    .update({
-      lastname: reservation.lastname,
-      firstname: reservation.firstname,
-      age: reservation.age,
-      sex: reservation.sex,
-      identitycard: reservation.identitycard,
-      campname: reservation.campname,
-      date: reservation.date
-    });
+    .doc(id)
+    .update(reservation);
   }
 
   getReservationById(user_id: string){

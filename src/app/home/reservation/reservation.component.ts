@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CampsCrudService } from '../camps-crud.service';
 import { Router } from '@angular/router';
 
@@ -15,13 +15,13 @@ export class ReservationComponent implements OnInit {
 
   constructor(private campsCrudService: CampsCrudService, private router: Router){
     this.reservationForm = new FormGroup({
-      lastname: new FormControl(''),
-      firstname: new FormControl(''),
-      age: new FormControl(''),
-      sex: new FormControl(''),
-      identitycard: new FormControl(''),
-      campname: new FormControl(''),
-      date: new FormControl('')
+      lastname: new FormControl('', Validators.required),
+      firstname: new FormControl('', Validators.required),
+      age: new FormControl('', Validators.required),
+      sex: new FormControl('', Validators.required),
+      identitycard: new FormControl('', Validators.required),
+      campname: new FormControl('', Validators.required),
+      date: new FormControl('', Validators.required)
     });
 
   }
