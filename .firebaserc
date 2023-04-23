@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "summercamp-ac1c4": {
+      "hosting": {
+        "summercampuse": [
+          "summercamp-ac1c4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "summercamp-ac1c4"
+  }
+}
