@@ -7,3 +7,7 @@
 mat-sidenav-container, mat-sidenav-content, mad-sidenav{
     height: 100%;
 }
+
+.container{
+    padding: 30px;
+}

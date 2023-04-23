@@ -15,6 +15,7 @@ import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ReservationHandlerComponent } from './reservation-handler/reservation-handler.component';
 import { MatTableModule } from '@angular/material/table';
+import { ReservationModifyComponent } from './reservation-modify/reservation-modify.component';
 
 
 
@@ -24,7 +25,8 @@ import { MatTableModule } from '@angular/material/table';
     HomeComponent,
     CampsComponent,
     ReservationComponent,
-    ReservationHandlerComponent
+    ReservationHandlerComponent,
+    ReservationModifyComponent
   ],
   imports: [
     CommonModule,

@@ -16,7 +16,10 @@
         </mat-form-field>
         <mat-form-field>
           <mat-label>Jelszó</mat-label>
-          <input formControlName="pw" matInput placeholder="jelszo123" />
+          <input formControlName="pw" matInput placeholder="jelszo123" [type]="showPassword ? 'text' : 'password'" />
+          <mat-icon matSuffix (click)="togglePasswordVisbility()" >
+            {{ showPassword? 'visibility_off':'visibility' }}
+          </mat-icon>
           <mat-error *ngIf="loginForm.get('pw')?.errors?.['required']">
             Kötelező kitölteni!
           </mat-error>

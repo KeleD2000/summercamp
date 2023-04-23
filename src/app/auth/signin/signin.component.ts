@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 })
 export class SigninComponent{
 
+  public showPassword: boolean = false;
+
   loginForm!: FormGroup;
 
   constructor(private authService: AuthService, private router: Router){
@@ -21,7 +23,7 @@ export class SigninComponent{
 
       }
     )
-  }
+    }
 
   onLogin(){
     this.authService.login(this.loginForm.get('email')?.value, this.loginForm.get('pw')?.value).then((cr) => {
@@ -30,6 +32,10 @@ export class SigninComponent{
     }).catch((err) => {
       console.log(err);
     });
+  }
+
+  togglePasswordVisbility(){
+    this.showPassword = !this.showPassword;
   }
 
 }

@@ -1,13 +1,5 @@
-.mat-mdc-form-field {
-    font-size: 14px;
-    width: 100%;
-  }
-
-.material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48
-  }
+.content{
+  width: 70%;
+  margin: 0 auto;
+}
 

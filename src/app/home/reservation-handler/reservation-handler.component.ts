@@ -9,7 +9,7 @@ import { Reservation } from 'src/app/models/Reservation';
   styleUrls: ['./reservation-handler.component.css']
 })
 export class ReservationHandlerComponent implements OnInit {
-  displayedColumns: string[] = ['lastname', 'firstname', 'age', 'sex', 'identitycard', 'campname', 'date'];
+  displayedColumns: string[] = ['lastname', 'firstname', 'age', 'sex', 'identitycard', 'campname', 'date', 'operations'];
 
   reservations!: Reservation[];
   CampsInfo!: CampsInfo[];
@@ -31,8 +31,9 @@ export class ReservationHandlerComponent implements OnInit {
 
   dataSource = this.reservations;
 
-  onSubmit(){
-
+  onDelete(reservation: Reservation){
+    this.campsCrudService.deleteStudent(reservation).then();
+    
   }
 
 }

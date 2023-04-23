@@ -26,14 +26,14 @@ export class CampsCrudService {
 
   deleteStudent(reservation: Reservation){
     return this.angularFirestone
-    .collection("reservation")
+    .collection<Reservation>("reservation")
     .doc(reservation.id)
     .delete();
   }
 
   updateCamps(reservation: Reservation){
     return this.angularFirestone
-    .collection("reservation")
+    .collection<Reservation>("reservation")
     .doc(reservation.id)
     .update({
       lastname: reservation.lastname,
