@@ -23,7 +23,8 @@ export class SignupComponent {
 
   onSignup(){
     this.authService.signup(this.registerForm.get('email')?.value, this.registerForm.get('pw')?.value).then((cr) => {
-      this.router.navigate(['auth/signin'])
+      console.log(cr);
+      this.router.navigate(['homem/home'])
     }).catch((err) => {
       console.log(err);
     });
