@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { ErroAuthEn } from '../ErrorAuthEn';
 
 
@@ -12,7 +11,7 @@ import { ErroAuthEn } from '../ErrorAuthEn';
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.css']
 })
-export class SigninComponent implements OnInit{
+export class SigninComponent{
 
   loggedInUser?: firebase.default.User | null;
 
@@ -20,7 +19,7 @@ export class SigninComponent implements OnInit{
 
   loginForm!: FormGroup;
 
-  constructor(private authService: AuthService, private router: Router, private angularFireAuth: AngularFireAuth){
+  constructor(private authService: AuthService, private router: Router){
     this.loginForm = new FormGroup(
       {
         email: new FormControl('', [Validators.required, Validators.email],),
@@ -28,14 +27,6 @@ export class SigninComponent implements OnInit{
 
       }
     )
-    }
-
-    ngOnInit(){
-      this.angularFireAuth.authState.subscribe(user =>{
-        if(user){
-          this.router.navigate(['homem/home']);
-        }
-      })
     }
 
   onLogin(){
