@@ -32,4 +32,8 @@ export class AuthService {
     });
   }
 
+  authState(){
+    return this.fireAuth.authState;
+  }
+
 }

@@ -10,7 +10,7 @@ import { AuthService } from './auth/auth.service';
 })
 export class AppComponent{
   title = 'summercampuse';
-
+ 
   @Output() sidenavToggle = new EventEmitter();
   @Output() logoutEvent = new EventEmitter();
   loggedInUser?: firebase.default.User | null;

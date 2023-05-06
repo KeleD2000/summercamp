@@ -16,12 +16,7 @@ export class CampsCrudService {
   }
 
   createReservation(reservation: Reservation){
-    return new Promise<any>((resolve, reject) => {
-      this.angularFirestone
-      .collection("reservation")
-      .add(reservation)
-      .then(response => { console.log(response) }, error => reject(error));
-    });
+    return this.angularFirestone.collection<Reservation>("reservation").add(reservation)
   }
 
   deleteStudent(reservation: Reservation){

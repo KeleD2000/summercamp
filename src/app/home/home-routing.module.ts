@@ -10,8 +10,8 @@ import { ReservationModifyComponent } from './reservation-modify/reservation-mod
 const routes: Routes = [
   {path:'home', component:HomeComponent, canActivate:[AuthGuard]},
   {path:'camps', component: CampsComponent, canActivate:[AuthGuard]},
-  {path:'reservation/:campname', component:ReservationComponent, canActivate:[AuthGuard]},
   {path:'reservationhandler', component: ReservationHandlerComponent, canActivate:[AuthGuard]},
+  {path:'reservation/:campname', component:ReservationComponent, canActivate:[AuthGuard]},
   {path:'reservation-modify/:id', component: ReservationModifyComponent, canActivate:[AuthGuard]}
 ];
 
